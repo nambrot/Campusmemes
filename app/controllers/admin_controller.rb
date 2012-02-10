@@ -36,6 +36,7 @@ redirect_to @oauth.url_for_oauth_code (
   
   def addCollege
     College.create (params[:college])
+     render :text => 'sdsd'
   end
   
   
@@ -44,5 +45,6 @@ end
 class CollegeJob < Object
     def perform
       College.all.each {|d| College.getPhotos(d)}
+     
     end
 end
