@@ -11,7 +11,7 @@ class AdminController < ApplicationController
 @oauth = Koala::Facebook::OAuth.new(ENV['fbid'], ENV['fbsecret'], facebook_callback_url)
 redirect_to @oauth.url_for_oauth_code (
   {
-    :scope => :offline_access
+    :permissions => [:offline_access, :read_stream]
   })
   end
   
