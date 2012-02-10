@@ -16,7 +16,7 @@ class College
     @token ||= Koala::Facebook::API.new(Token.first.token)
     feed = @token.get_connections(college.fbid, 'feed', {:limit => 50}).keep_if{|d| d['type'] == 'photo'}
     process(feed, college)
-    while (feed.next_page_params && Time.parse(feed.last['created_time']) > 2.days.ago) do
+    while (feed.next_page_params) do
       feed = feed.next_page.keep_if{|d| d['type'] == 'photo'}
       process(feed, college)
     end
