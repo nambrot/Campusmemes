@@ -16,7 +16,7 @@ redirect_to @oauth.url_for_oauth_code (
   end
   
   def callback
-    @oauth = Koala::Facebook::OAuth.new(ENV['fbid', ENV['fbsecret'], facebook_callback_url)
+    @oauth = Koala::Facebook::OAuth.new(ENV['fbid'], ENV['fbsecret'], facebook_callback_url)
     token =  @oauth.get_access_token params[:code]
     Token.all.each {|d| d.destroy}
     Token.create ({:token => token})
