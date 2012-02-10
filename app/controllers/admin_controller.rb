@@ -9,7 +9,10 @@ class AdminController < ApplicationController
   
   def getToken    
 @oauth = Koala::Facebook::OAuth.new(ENV['fbid'], ENV['fbsecret'], facebook_callback_url)
-redirect_to @oauth.url_for_oauth_code 
+redirect_to @oauth.url_for_oauth_code (
+  {
+    :scope => [:offline_access]
+  })
   end
   
   def callback
