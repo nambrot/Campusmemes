@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-  before_filter :authenticate, :only => [:fetch, :update, :addCollege, :getToken]
+  before_filter :authenticate, :only => [:fetch, :update, :addCollege, :getToken, :index]
 
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
