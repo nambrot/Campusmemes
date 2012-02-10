@@ -2,6 +2,8 @@
 
 Photos:
 <%= @colleges.map{|d| d.photos.count}.to_json %>
+Jobs:
+<%= Delayed::Job.all.count %>
 
 <%= form_for @college, :url => admin_addcollege_path, :html => {:class => "nifty_form"} do |f| %>
   Name: <%= f.text_field :name %>
