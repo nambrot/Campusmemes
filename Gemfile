@@ -15,7 +15,7 @@ gem 'zurb-foundation', :group => :assets
 gem 'unicorn'
 gem 'foreman'
 gem 'delayed_job_mongoid'
-
+gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
