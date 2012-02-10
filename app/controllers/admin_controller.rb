@@ -26,7 +26,7 @@ redirect_to @oauth.url_for_oauth_code (
   
   def update
     Delayed::Job.enqueue CollegeJob.new
-    render :json => College.all
+    render :json => College.all.map{|d| d.name}
   end
   
   def index
