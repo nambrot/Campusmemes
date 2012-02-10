@@ -42,7 +42,7 @@ window.Photos = Backbone.Collection.extend
     this.loading = false
     this.page = 1
     this.sort = 'likes'
-    this.range = 1
+    this.range = 10000000000
     this.el = $('.photos')
     this.college = params.college.toLowerCase()
     this.bind 'appended', this.appended, this

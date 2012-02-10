@@ -31,6 +31,12 @@
       
     </header>
   </div>
+  <% flash.each do |key, value| %>
+
+      <%= content_tag(:div, value, :class => "alert-box success") %>
+
+    <% end %>
+
   <div class="row">
     <%= yield %>
   </div>

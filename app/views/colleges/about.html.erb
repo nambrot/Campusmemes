@@ -9,4 +9,11 @@
   <p>
     If you don't see your college here, shoot me a mail at <a href="mailto:nam@nambrot.com">nam@nambrot.com</a>, or on <a href="http://www.facebook.com/namchuhoai">Facebook</a> via FBMessage.
   </p>
+  <p>If you have the data, you can also add it here:</p>
+  <%= form_for @college, :url => colleges_path, :html => {:class => "nifty_form"} do |f| %>
+    Name: <%= f.text_field :name %>
+    Short: <%= f.text_field :short %>
+    URL: <%= f.text_field :url %>
+    <%= f.submit "Create" %>
+  <% end %>
 </div>

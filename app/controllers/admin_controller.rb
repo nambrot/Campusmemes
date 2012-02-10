@@ -31,6 +31,7 @@ redirect_to @oauth.url_for_oauth_code (
   
   def index
     @colleges = College.all
+    @proposed = ProposedCollege.all
     @college = College.new 
   end
   
