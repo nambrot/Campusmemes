@@ -1,0 +1,8 @@
+<%=  @colleges.map{|d| {:name => d.name, :short => d.short, :url => d.url, :fbid => d.fbid}}.to_json  %>
+<%= form_for @college, :url => admin_addcollege_path, :html => {:class => "nifty_form"} do |f| %>
+  Name: <%= f.text_field :name %>
+  Short: <%= f.text_field :short %>
+  URL: <%= f.text_field :url %>
+  FBID: <%= f.text_field :fbid %>
+  <%= f.submit "Create" %>
+<% end %>

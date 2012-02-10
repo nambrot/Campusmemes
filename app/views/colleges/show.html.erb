@@ -1,0 +1,27 @@
+<div class="row">
+<p>
+  You are currently viewing the memes for <%= @college.name %>
+</p>
+
+<ul id="rangepicker">
+  <li>Date Range:</li>
+  <li><button data-range="1">Day</button></li>
+  <li><button data-range="7">Week</button></li>
+  <li><button data-range="30">Month</button></li>
+  <li><button data-range="100000000000" class="selected">All</button></li>
+</ul>
+<ul id="sortpicker">
+  <li>Sort By:</li>
+  <li><button data-sort="likes" class="selected">Like</button></li>
+  <li><button data-sort="created_at">Time</button></li>
+</ul>
+</div>
+<div class="row">
+<div class="photos">
+
+</div>
+</div>
+
+<script type="text/javascript">
+  var photos = new Photos([],{college: '<%= @college.short %>'});
+</script>

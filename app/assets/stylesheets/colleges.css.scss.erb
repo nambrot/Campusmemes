@@ -1,0 +1,117 @@
+// Place all the styles related to the colleges controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  color: white;
+  background-color: #333;
+  background-image: url(<%= asset_path 'denim.png' %>);
+  
+}
+.row { width: 100%; max-width: 20000px; min-width: 727px; margin: 0 auto; }
+.photo {
+
+  float: left;
+  img {
+    border-radius: 15px;
+    box-shadow: 20px 20px 30px -5px black;
+    margin: 10px;
+    width: 400px;
+    &:hover{
+      cursor: pointer;
+      box-shadow: 1px 1px 23px -5px white;
+    }
+    
+      
+  }
+}
+.photos {
+  margin: 0px auto;
+}
+
+header {
+  ul {
+    list-style: none;
+    float:right;
+    margin-right: 20px;
+    li {
+      margin-left: 10px;
+      display: inline;
+      a {
+        font-size: 1.5em;
+        color: white;
+        &:hover {
+          color:white;
+          text-decoration: underline;
+        }
+      }
+      
+    }
+  }
+  margin: 0px auto;
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 5em;
+    text-shadow: 2px 3px 10px black;
+  }
+}
+p {
+  margin-left: 20px;
+  font-size: 2em;
+  color: white;
+}
+
+ul#rangepicker, ul#sortpicker {
+  margin-right: 10px;
+  display: inline;
+  float: right;
+  list-style: none;
+  li {
+    font-size: 1.2em;
+    display: inline;
+    
+  }
+}
+button, .button {
+  font-size: 1em;
+  font-weight: 600;
+  background-color: #2DAEBF;
+  display: inline-block; 
+	padding: 5px 10px 6px; 
+	color: #fff; 
+	text-decoration: none;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	border: 0px;
+	cursor: pointer;
+	&:hover {
+    background-color: #FFB515;
+	}
+  &:active {
+    background-color: #FFB515;
+  }
+}
+button.selected {
+   background-color: #FFB515;
+}
+
+.college {
+  margin: 10px;
+  width: 400px;
+  display: inline-block;
+  h5 {
+    font-size: 2em;
+    color: white;
+  }
+  .leftbutton {
+    text-align: right;
+  }
+  .rightbutton {
+    text-align: left;
+  }
+}

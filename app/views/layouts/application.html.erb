@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Collegememes</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="row">
+  <div class="row">
+    <header>
+      <ul>
+        <li><a href="/">Switch to another College</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      <h1>Campus Memes</h1>
+    </header>
+  </div>
+  <div class="row">
+    <%= yield %>
+  </div>
+
+</div>
+</body>
+</html>

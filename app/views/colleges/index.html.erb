@@ -1,0 +1,21 @@
+
+  <% @colleges.each do |college| %>
+  <div class="college" style="text-align: center;">
+    <div class="row">
+      <h5>
+        <%= college.name %>
+      </h5>
+      <div class="row">
+        <div class="six columns leftbutton">
+            <%= link_to 'Go to the Memes', college_path(college.short),  :class => 'button' %>
+        </div>
+        <div class="six columns rightbutton">
+          <a href="<%= college.url  %>" class="button">Go to Facebook Group</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <% end  %>
+

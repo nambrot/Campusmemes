@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fbid: 1
+  thumburl: MyString
+  fullurl: MyString
+
+two:
+  fbid: 1
+  thumburl: MyString
+  fullurl: MyString
