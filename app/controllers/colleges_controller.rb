@@ -1,12 +1,11 @@
 class CollegesController < ApplicationController
-  respond_to :json, :html
+  respond_to :html
   def index
     @colleges = College.all.asc(:name)
   end
   
   def show
     @college = College.where("this.short.toLowerCase() == '#{params[:id]}'").first
-    respond_with @college
   end
   
   def create
