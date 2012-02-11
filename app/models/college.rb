@@ -1,11 +1,11 @@
 require 'ap'
 class College
   include Mongoid::Document
+  include Mongoid::Timestamps
   field :name, :type => String
   field :short, :type => String
   field :url, :type => String
   field :fbid, :type => Integer
-  field :created_at, :type => DateTime
   validates_uniqueness_of :fbid
   key :short
   cache

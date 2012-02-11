@@ -1,6 +1,6 @@
 ## Code for Campusmemes
 
-Code for http://campusmemes.herokuapp.com
+Code for http://collegememes.herokuapp.com
 
 * Uses mongoid for backend
 * uses koala for facebook's graph API
