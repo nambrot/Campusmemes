@@ -15,7 +15,7 @@ gem 'zurb-foundation', :group => :assets
 gem 'unicorn'
 gem 'foreman'
 gem 'delayed_job_mongoid'
-
+gem 'clockwork'
 group :development do
   gem 'sqlite3'
 end
